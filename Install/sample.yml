@@ -1,0 +1,16 @@
+---
+- hosts: all
+  remote_user: root
+  vars:
+    rootpw: 'passw0rd'
+  tasks:
+    - name: test  
+      yum: name={{ item }} state=installed
+      with_items:
+        - httpd
+        - rsyslog
+
+    - name: enable deamon
+      service: name={{ item }} state=started enabled=yes
+      with_items:
+        - httpd

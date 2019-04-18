@@ -1,0 +1,8 @@
+#動作内容
+パッケージのインストールとデーモン自動有効化
+
+#実行コマンド
+sudo ansible-playbook -i hosts sample.yml -u nuretan -k
+
+#動作環境
+CentOS7(Linux localhost.localdomain 3.10.0-862.2.3.el7.x86_64 #1 SMP Wed May 9 18:05:47 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux)
